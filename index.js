@@ -32,8 +32,14 @@ const player = new Sprite({
 player.draw()
 
 const enemy = new Sprite({
+    position: {
     x: 400,
     y: 100
+  },
+    velocity: {
+    x: 0,
+    y: 0
+  }
 })
 
 enemy.draw()
