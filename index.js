@@ -82,11 +82,19 @@ function animate() {
     enemy.update()
 
     player.velocity.x = 0
-
+    
+    // player movement
     if (keys.a.pressed && lastKey === 'a') {
       player.velocity.x = -1
     } else if (keys.d.pressed && lastKey === 'd') {
       player.velocity.x = 1
+    }
+
+    // enemy movement
+    if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
+      enemy.velocity.x = -1
+    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+      enemy.velocity.x = 1
     }
 }
 
