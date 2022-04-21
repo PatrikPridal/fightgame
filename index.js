@@ -60,12 +60,27 @@ const enemy = new Sprite({
 
 console.log(player);
 
+const keys = {
+  a: {
+    pressed: false
+  },
+  d: {
+    pressed: false
+  }
+}
+
 function animate() {
     window.requestAnimationFrame(animate)
     c.fillStyle = 'black'
     c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
     enemy.update()
+
+    if (keys.a.pressed) {
+      player.velocity.x = 1
+    } else if (keys.d.pressed) {
+      player.velocity.x = 1
+    }
 }
 
 animate()
