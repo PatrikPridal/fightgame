@@ -115,6 +115,11 @@ function animate() {
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
       enemy.velocity.x = 5
     }
+
+    // detect for collision
+    if (player.attackBox.position.x + player.attackBox.width >= enemy.position.x) {
+      console.log('ggg');
+    }
 }
 
 animate()
